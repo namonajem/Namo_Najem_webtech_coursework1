@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="rot13.css"
-
-		<title>Caeser Encoder</title>
-	<head>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
 	<body>
-		<h1>A Caesar Encoder</h1>
-		<p>About Caesar...</p>
 
-    <div id="input_area">
-      <textarea rows="1" cols="50" autofocus id="message">Type your sooper sekret message here</textarea>
-      <button type="button" onclick="encodecaesar(0)" id="encode_button">Encodify Everything</button>
-			<button type="button" onclick="encodecaesar(1)" id="decode_button">Decodify Caesar</button>
+		<div id="container">
 
-      </div>
+		<div id="header">
+		<h1>Caesar Encoder</h1>
+	</div>
 
-      <div id="output_area">
-        <p>
-          This is your encoded message:<br />
-          <div id="output"></div>
-          </p>
-        <div>
-    <script type="text/javascript" src="index.js"></script>
-	</body>
-</html>
+	<button id="openNav" type="nav" class="openNav" onclick="openNav()">&#9776; Open Navigation</button>
+
+	<div id="content">
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="index.html">Home</a>
+			<a href="rot13.html">ROT13 Cypher</a>
+			<a href="caesar.html">Caesar Cypher</a>
+			<a href="caesar.html">Caesar Cypher</a>
+			<a href="caesar.html">Caesar Cypher</a>
+			<a href="About.html">About</a>
+		</div>
+
+		<label id="label">Type your message here</label>
+      <input rows="1" cols="50" autofocus  id="input_area"></input>
+
+
+			<button class="button" type="button" onclick="encodecaesar(0)" id="encode_button">Encode Message</button>
+			<button class="button" type="button" onclick="encodecaesar(1)" id="decode_button">Decode Message</button>
+
+
+			      <div id="output_area">
+			        <p>This is your encoded message:<br />
+								 <div id="output"></div>
+			          </p>
+							</div>
+				</div>
+				<div id="footer">
+					Copyright &copy; 2019 Namo Najem
+				</div>
+			</div>
+			    <script type="text/javascript" src="index.js"></script>
+
+				</body>
+			</html>

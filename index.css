@@ -1,16 +1,23 @@
 body{
   background: gray;
-  padding: 70px;
+  padding: 80px;
 }
 
 a
 {
  color:gray;
+ text-decoration: none;
+}
+a:hover {
+
+  text-decoration: underline;
+  color:  #003E47;
 }
 
 
 .main {
     grid-template-columns: repeat(3, 1fr) !important;
+
 }
 
 .sidenav {
@@ -103,6 +110,8 @@ button[type=nav]:hover {
   margin-top: -50px;
   margin-left: 100px;
   margin-right: 100px;
+
+
 }
 
 #header{
@@ -122,6 +131,7 @@ button[type=nav]:hover {
     font-family: 'Crete Round';
     text-align: center;
     padding: 0px;
+    padding-top:-50px;
 
     display: grid;
     grid-template-columns: repeat(1, 3fr);
@@ -132,6 +142,8 @@ button[type=nav]:hover {
 #nav {
 
   padding-top: 100px;
+  font-size: 25px;
+
 
 }
 
@@ -152,9 +164,10 @@ button[type=nav]:hover {
 }
 
 #output_area {
+  position: sticky;
   font-size: 25px;
   color: gray;
-  margin-top: -350px;
+  margin-top: -400px;
 }
 
 #label {
@@ -165,7 +178,7 @@ button[type=nav]:hover {
 
 }
 
-#encode_button{
+#encode-decode_button{
   margin-top: -300px;
   margin-bottom: 400px;
   margin-left: 500px;
@@ -175,15 +188,31 @@ button[type=nav]:hover {
   font-family: 'Crete Round';
   outline: none;
 }
-
-#main {
-
-
+#encode_button{
+  margin-top: -300px;
+  margin-bottom: 400px;
+  margin-left: 300px;
+  margin-right: 800px;
+  font-size: 25px;
+  color: white;
+  font-family: 'Crete Round';
+  outline: none;
 }
+#decode_button{
+  margin-top: -500px;
+  margin-bottom: 600px;
+  margin-left: 800px;
+  margin-right: 300px;
+  font-size: 25px;
+  color: white;
+  font-family: 'Crete Round';
+  outline: none;
+}
+
 
 #footer{
   clear:both;
-  padding: 50px;
+  padding: 20px;
   border-radius: 25px;
 
 }
