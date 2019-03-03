@@ -36,7 +36,7 @@ a:hover {
   overflow-x: hidden;
   overflow-y:auto;
   transition: 0.5s;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 .sidenav a {
   padding: 2px 2px 2px 2px;
@@ -168,6 +168,7 @@ button[type=nav]:hover {
   font-size: 25px;
   color: gray;
   margin-top: -400px;
+
 }
 
 #label {

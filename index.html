@@ -10,10 +10,25 @@
 				<h1>Namo Najem Cyphers Main Page</h1>
 			</div>
 
+			<button id="openNav" type="nav" class="openNav" onclick="openNav()">&#9776; Open Navigation</button>
+
+					<div id="content">
+						<div id="mySidenav" class="sidenav">
+						  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						  <a href="index.html">Home</a>
+						  <a href="rot13.html">ROT13 Cypher</a>
+						  <a href="caesar.html">Caesar Cypher</a>
+							<a href="morse.html">Morse Code</a>
+							<a href="piglatin.html">Pig latin</a>
+						  <a href="About.html">About</a>
+						</div>
+
+
 				<div class="main" id="content">
-					<a id ="nav" href="caesar.html">Go to Caesar Cypher</a>
 					<a id ="nav" href="rot13.html">Go to ROT13 Cypher</a>
-					<a id ="nav" href="crypto.html">Go to Crypto Cypher</a>
+					<a id ="nav" href="caesar.html">Go to Caesar Cypher</a>
+					<a id ="nav" href="morse.html">Go to Morse Cypher</a>
+					<a id ="nav" href="piglatin.html">Go to Pig Latin Cypher</a>
 				</div>
 
 
@@ -22,5 +37,8 @@
 			<div id="footer">
 				Copyright &copy; 2019 Namo Najem
 			</div>
+
+			    <script type="text/javascript" src="index.js"></script>
+
 	</body>
 </html>

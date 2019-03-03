@@ -1,9 +1,12 @@
 function encoderot13()
 {
-  var plain_text = document.getElementById("input_area").value;
-  var cypher_text = [];
+  //declaring our variables
+  var plain_text = document.getElementById("input_area").value; //input string
+  var cypher_text = []; //output string
   var alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
+
+  //for loop that replaces each letter with one 13 letters after it
   for(var idx=0; idx<plain_text.length; idx++)
   {
     input = alphabet.indexOf(plain_text[idx]);
@@ -13,17 +16,18 @@ function encoderot13()
     }
     else
     {
-      var coded = (input+13)%26;
+      var coded = (input+13)%26; //adding 13 to the value
       var letter = alphabet[coded];
-      cypher_text.push(letter);
+      cypher_text.push(letter); //pushing the substitute to the output string
     }
   }
-  document.getElementById("output").innerHTML = cypher_text.join("");
+  document.getElementById("output").innerHTML = cypher_text.join(""); //outputing to html element
 }
 
 function encodecaesar(b)
 {
-  var plain_text = document.getElementById("input_area").value;
+  //declaring our variables
+  var plain_text = document.getElementById("input_area").value; //input string
   var length = plain_text.length;
   var cypher_text = '';
 
@@ -40,16 +44,91 @@ function encodecaesar(b)
 			var value = plain_text.charCodeAt(i);
 
 			if ((value >= 65) && (value <= 90))
-				l = String.fromCharCode(((value - 65 + length) % 26) + 65);
+				l = plain_texting.fromCharCode(((value - 65 + length) % 26) + 65);
 
 			else if ((value >= 97) && (value <= 122))
 				l = String.fromCharCode(((value - 97 + length) % 26) + 97);
 		}
 		cypher_text += l;
 	}
-  document.getElementById("output").innerHTML = cypher_text;
+  document.getElementById("output").innerHTML = cypher_text; //outputing to html element
 
 }
+
+function encodemorse(b)
+{
+  var alphabet = [ ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' ];
+  //two arrays with values in corresponding positions
+  var morse = [ "\xa0\xa0\xa0\xa0", "._", "_...", "_._.", "_..", ".", ".._.", "__.", "....", "..", ".___", "_._", "._..", "__", "_.", "___", ".__.", "__._", "._.", "...", "_", ".._", "..._", ".__", "_.._", "_.__", "__..", ".____", "..___", "...__", "...._", ".....", "_....", "__...", "___..", "____.", "_____" ];
+
+  //declaring our variables
+  var plain_text = document.getElementById("input_area").value.toLowerCase(); //input string lowercased immediately
+  var cypher_text = '';
+
+  //if statement to check if we decode or encode
+  if (!b)
+  {
+  var words = plain_text.split(" "); //splitting input into words
+
+  for (var j=0; j < words.length; j ++)
+  {
+    var word = words[j]; //selecting one word from the words
+
+    for (var i = 0; i < word.length; i ++) {
+
+      var l = alphabet.indexOf(word[i]); //finding what index in the alphabet array our letter corresponds to
+
+        cypher_text += morse[l] + " "; //using the index we got above to choose the morsecode for that letter and adding it to our output string
+      }
+      cypher_text += "/"; // adding / to seperate words
+    }
+  }
+  else
+  {
+    var words = plain_text.split("/"); //splitting input into words
+
+    for (var j=0; j < words.length; j++)
+    {
+      var word = words[j]; //selecting one word from the word
+
+      var letters = word.split(" "); //splitting again into letters of morsecode
+
+      for (var i = 0; i < letters.length-1; i++) {
+
+        var letter = letters[i]; //selecting one letter
+
+          var l = morse.indexOf(letter);   //finding what index in the morsecode array our letter corresponds to
+          cypher_text += alphabet[l]; //adding the letter equivalent to our output string
+
+    }
+         cypher_text += " ";
+
+        }
+      }
+
+document.getElementById("output").innerHTML = cypher_text; //outputing to html element
+}
+
+function encodepig(b) {
+
+  var plain_text = document.getElementById("input_area").value.toLowerCase(); //input string lowercased immediately
+  var cypher_text = '';
+  var vowels = /[aeiou]/gi;
+
+  if (plain_text[0].match(vowels)){ //if word starts with a vowel we just add way
+
+    cypher_text = plain_text + "way";
+  }
+  else {
+    var firstvowel = plain_text.indexOf(plain_text.match(vowels)[0]);
+
+    cypher_text = plain_text.substr(firstvowel) + plain_text.substr(0, firstvowel) + 'ay'; //otherwise we take all constanants before the first vowel, add them to the end of our word followed by "ay"
+  }
+  document.getElementById("output").innerHTML = cypher_text; //outputing to html element
+}
+
+
+
 
 
 function openNav() {
