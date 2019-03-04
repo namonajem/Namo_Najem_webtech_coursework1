@@ -88,7 +88,7 @@ a:hover {
 button[type=button]:hover {
   text-decoration:underline;
   background-color:#003566;
-  background-image: url("rain.gif");
+  background-image: url("Rain.gif");
 
 }
 
@@ -102,13 +102,13 @@ button[type=nav]:hover {
 }
 
 .image {
-    display: grid;
-    grid-template-columns: repeat(1, 4fr);
+
     max-width:180px;
     max-height:180px;
     width: auto;
     height: auto;
 }
+
 
 .container {
   background-color: white;
