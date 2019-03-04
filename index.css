@@ -16,19 +16,17 @@ a:hover {
 
 
 .main {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
 
 }
 
-.sidenav {
-  height: 150%;
-  width:0;
 
+.sidenav {
+  height: 250%;
+  width:0;
   font-family: 'Crete Round';
   position: sticky;
-
   border-radius: 25px;
-  grid-template-columns: repeat(3, 1fr)!important;
   z-index: 1;
   top:0;
   left:0;
@@ -86,6 +84,7 @@ a:hover {
   outline: none;
 }
 
+
 button[type=button]:hover {
   text-decoration:underline;
   background-color:#003566;
@@ -102,10 +101,18 @@ button[type=nav]:hover {
 
 }
 
-#container {
+.image {
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    max-width:180px;
+    max-height:180px;
+    width: auto;
+    height: auto;
+}
+
+.container {
   background-color: white;
   color:Gray;
-
   border-radius: 25px;
   margin-top: -50px;
   margin-left: 100px;
@@ -122,20 +129,19 @@ button[type=nav]:hover {
   text-align: center;
   padding-top: 35px;
   padding-bottom: 35px;
+  text-shadow: 4px 4px #000000;
 
 }
 
-#content  {
-    padding-top: 200px;
+.content {
+    padding:inherit;
     border-radius: 25px;
     font-family: 'Crete Round';
     text-align: center;
-    padding: 0px;
-    padding-top:-50px;
-
     display: grid;
     grid-template-columns: repeat(1, 3fr);
-    grid-auto-rows: 200px;
+    grid-auto-rows: 100px;
+
 }
 
 
@@ -154,60 +160,54 @@ button[type=nav]:hover {
 
 #input_area {
   border-radius: 25px;
-  margin: -300px 150px 350px 150px;
+  padding-top: -200px;
+  margin: auto;
   border: 4px solid #003E47;
+  padding: 20px;
   font-size: 25px;
   color: gray;
   font-family: 'Crete Round';
+  width:60%;
   text-align: center;
-  width:auto;
 }
 
 #output_area {
-  position: sticky;
+  text-align: center;
   font-size: 25px;
   color: gray;
-  margin-top: -400px;
 
 }
 
 #label {
+  text-align: center;
   font-size: 25px;
   color: gray;
   font-family: 'Crete Round';
-  margin-top: -200px;
 
 }
 
 #encode-decode_button{
-  margin-top: -300px;
-  margin-bottom: 400px;
-  margin-left: 500px;
-  margin-right: 500px;
+    margin: auto;
   font-size: 25px;
   color: white;
   font-family: 'Crete Round';
   outline: none;
+  text-align: center;
+  margin: auto;
+
+  width: 30%;
+  height: 70%;
 }
-#encode_button{
-  margin-top: -300px;
-  margin-bottom: 400px;
-  margin-left: 300px;
-  margin-right: 800px;
+
+#encode_button, #decode_button{
+  margin: auto;
   font-size: 25px;
   color: white;
   font-family: 'Crete Round';
   outline: none;
-}
-#decode_button{
-  margin-top: -500px;
-  margin-bottom: 600px;
-  margin-left: 800px;
-  margin-right: 300px;
-  font-size: 25px;
-  color: white;
-  font-family: 'Crete Round';
-  outline: none;
+  text-align: center;
+  width: 30%;
+  height: 70%;
 }
 
 

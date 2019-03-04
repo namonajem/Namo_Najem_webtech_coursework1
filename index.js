@@ -115,15 +115,31 @@ function encodepig(b) {
   var cypher_text = '';
   var vowels = /[aeiou]/gi;
 
-  if (plain_text[0].match(vowels)){ //if word starts with a vowel we just add way
+  if (!b) {
 
-    cypher_text = plain_text + "way";
-  }
-  else {
-    var firstvowel = plain_text.indexOf(plain_text.match(vowels)[0]);
+    var words = plain_text.split(" ");
 
-    cypher_text = plain_text.substr(firstvowel) + plain_text.substr(0, firstvowel) + 'ay'; //otherwise we take all constanants before the first vowel, add them to the end of our word followed by "ay"
-  }
+    for (var i = 0; i < words.length; i++) {
+
+        var word = words[i];
+
+        if (word[0].match(vowels)){ //if word starts with a vowel we just add way
+
+          cypher_text += word + "way ";
+        }
+        else {
+          var firstvowel = word.indexOf(word.match(vowels)[0]);
+
+          cypher_text += word.substr(firstvowel) + word.substr(0, firstvowel) + 'ay '; //otherwise we take all constanants before the first vowel, add them to the end of our word followed by "ay"
+        }
+    }
+
+}
+else {
+  cypher_text = 'WIP';
+
+
+}
   document.getElementById("output").innerHTML = cypher_text; //outputing to html element
 }
 
