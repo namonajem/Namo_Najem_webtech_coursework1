@@ -15,8 +15,24 @@ a:hover {
 }
 
 
-.main {
-    grid-template-columns: repeat(4, 1fr) !important;
+.HomeButton {
+
+  font-family: 'Crete Round';
+  border-radius: 25px;
+  border: 6px solid #003E47;
+  color: White;
+  background-color: #003E47;
+  padding: 5px;
+  outline: none;
+  margin: auto;
+  font-size: 25px;
+  color: white;
+  font-family: 'Crete Round';
+  outline: none;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  height: 70%;
 
 }
 
@@ -85,6 +101,8 @@ a:hover {
 }
 
 
+
+
 button[type=button]:hover {
   text-decoration:underline;
   background-color:#003566;
@@ -92,12 +110,54 @@ button[type=button]:hover {
 
 }
 
-button[type=nav]:hover {
+a[type=Homerot]:hover {
 
+    color: white;
     text-decoration:underline;
-    color:#003E47;
+    transition: 0.5s;
+    background-position: center;
+    background-image: url("rot.PNG");
+    background-size: cover;
+    text-shadow: 1px 1px 0px  #003E47, -1px -1px 0px  #003E47, 1px -1px 0px  #003E47, -1px 1px 0px  #003E47;
 
-    transition: 1s;
+}
+
+a[type=Homecaesar]:hover {
+
+    color: white;
+    text-decoration:underline;
+    transition: 0.5s;
+    background-position: center;
+    background-image: url("caesar.PNG");
+    background-size: cover;
+    text-shadow: 1px 1px 1px  #003E47, -1px -1px 0px  #003E47, 1px -1px 1px  #003E47, -1px 1px 0px  #003E47;
+
+}
+
+a[type=Homepig]:hover {
+
+    color: white;
+    text-decoration:underline;
+
+    transition: 0.5s;
+    background-position: center;
+    background-image: url("pig.PNG");
+    background-size: cover;
+    text-shadow: 1px 1px 0px  #003E47, -1px -1px 0px  #003E47, 1px -1px 0px  #003E47, -1px 1px 0px  #003E47;
+
+
+}
+
+a[type=Homemorse]:hover {
+
+    color: white;
+    text-decoration:underline;
+
+    transition: 0.5s;
+    background-position: center;
+    background-image: url("morse.PNG");
+    background-size: cover;
+    text-shadow: 1px 1px 0px  #003E47, -1px -1px 0px  #003E47, 1px -1px 0px  #003E47, -1px 1px 0px  #003E47;
 
 }
 
@@ -118,6 +178,29 @@ button[type=nav]:hover {
   margin-left: 100px;
   margin-right: 100px;
 
+}
+
+.containerMain {
+  display:block;
+  height: 700px;
+  background-color: white;
+  color:Gray;
+  border-radius: 25px;
+  margin-top: -50px;
+  margin-left: 100px;
+  margin-right: 100px;
+
+
+}
+
+.content {
+    padding:inherit;
+    border-radius: 25px;
+    font-family: 'Crete Round';
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    grid-auto-rows: 100px;
 
 }
 
@@ -133,25 +216,19 @@ button[type=nav]:hover {
 
 }
 
-.content {
-    padding:inherit;
-    border-radius: 25px;
-    font-family: 'Crete Round';
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(1, 3fr);
-    grid-auto-rows: 100px;
-
-}
 
 
-#nav {
-
-  padding-top: 100px;
-  font-size: 25px;
+.main {
+  display:grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-auto-rows: 100px;
+  grid-column-gap: 20px;
+  grid-row-gap: 100px;
 
 
 }
+
+
 
 #mySidenav {
  border: 0px solid #003E47;
@@ -169,6 +246,7 @@ button[type=nav]:hover {
   font-family: 'Crete Round';
   width:60%;
   text-align: center;
+    outline: none;
 }
 
 #output_area {
@@ -199,6 +277,7 @@ button[type=nav]:hover {
   height: 70%;
 }
 
+
 #encode_button, #decode_button{
   margin: auto;
   font-size: 25px;
@@ -210,10 +289,11 @@ button[type=nav]:hover {
   height: 70%;
 }
 
-
 #footer{
-  clear:both;
+  margin-top: 240px;
   padding: 20px;
   border-radius: 25px;
+  text-align: left;
+  font-family: 'Crete Round';
 
 }

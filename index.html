@@ -1,55 +1,47 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>SET08101 - HTML Links</title>
+	<link rel="stylesheet" type="text/css" href="index.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
 	<head>
-		<title>SET08101 - HTML Links</title>
-		<link rel="stylesheet" type="text/css" href="index.css"/>
-		<link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
-	<head>
-	<body>
-		<div class="container">
-			<div id="header">
-				<h1>Namo Najem Cyphers Main Page</h1>
-			</div>
-
-			<button id="openNav" type="nav" class="openNav" onclick="openNav()">&#9776; Open Navigation</button>
-
-					<div class="content">
-						<div id="mySidenav" class="sidenav">
-						  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-						  <a href="index.html">Home</a>
-						  <a href="rot13.html">ROT13 Cypher</a>
-						  <a href="caesar.html">Caesar Cypher</a>
-							<a href="morse.html">Morse Code</a>
-							<a href="piglatin.html">Pig latin</a>
-						  <a href="About.html">About</a>
-						</div>
-
-
-
-				<img class="image" src="rot.PNG" />
-
-				<img class="image" src="caesar.PNG" />
-
-				<img class="image"src="morse.PNG" />
-
-				<img class="image" src="pig.PNG" />
-
-
-				<div class="main" id="content">
-					<a id ="nav" href="rot13.html">Go to ROT13 Cypher</a>
-					<a id ="nav" href="caesar.html">Go to Caesar Cypher</a>
-					<a id ="nav" href="morse.html">Go to Morse Cypher</a>
-					<a id ="nav" href="piglatin.html">Go to Pig Latin Cypher</a>
+		<body>
+			<div class="containerMain">
+				<div id="header">
+					<h1>Namo Najem Cyphers Main Page</h1>
 				</div>
 
+				<button id="openNav" type="nav" class="openNav" onclick="openNav()">&#9776; Open Navigation</button>
+
+				<div class="content">
+					<div id="mySidenav" class="sidenav">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						<a href="index.html">Home</a>
+						<a href="rot13.html">ROT13 Cypher</a>
+						<a href="caesar.html">Caesar Cypher</a>
+						<a href="morse.html">Morse Code</a>
+						<a href="piglatin.html">Pig latin</a>
+						<a href="About.html">About</a>
+
+					</div>
+
+					<div class="main">
+						<a class="HomeButton" type="Homerot" id="HomeButton" href="rot13.html">ROT13 Cypher</a>
+						<a class="HomeButton" type="Homecaesar" id="HomeButton" href="caesar.html">Caesar Cypher</a>
+						<a class="HomeButton" type="Homemorse" id="HomeButton" href="morse.html">Morse Cypher</a>
+						<a class="HomeButton" type="Homepig" id="HomeButton" href="piglatin.html">Pig Latin Cypher</a>
+					</div>
 
 
 
-			<div id="footer">
-				Copyright &copy; 2019 Namo Najem
+				</div>
+
+				<div id="footer">
+					<div class="footer">Copyright &copy; 2019 Namo Najem	</div>
+					</div>
 			</div>
+			<script type="text/javascript" src="index.js"></script>
 
-			    <script type="text/javascript" src="index.js"></script>
-
-	</body>
-</html>
+		</body>
+	</head>
+	</html>

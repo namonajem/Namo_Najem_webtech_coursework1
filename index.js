@@ -1,9 +1,9 @@
 function encoderot13()
 {
   //declaring our variables
-  var plain_text = document.getElementById("input_area").value; //input string
+  var plain_text = document.getElementById("input_area").value.toLowerCase(); //input string
   var cypher_text = []; //output string
-  var alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+  var alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ']
 
 
   //for loop that replaces each letter with one 13 letters after it
@@ -59,7 +59,7 @@ function encodemorse(b)
 {
   var alphabet = [ ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' ];
   //two arrays with values in corresponding positions
-  var morse = [ "\xa0\xa0\xa0\xa0", "._", "_...", "_._.", "_..", ".", ".._.", "__.", "....", "..", ".___", "_._", "._..", "__", "_.", "___", ".__.", "__._", "._.", "...", "_", ".._", "..._", ".__", "_.._", "_.__", "__..", ".____", "..___", "...__", "...._", ".....", "_....", "__...", "___..", "____.", "_____" ];
+  var morse = [ "\xa0\xa0\xa0\xa0", "._", "_...", "_._.", "_..", ".", ".._.", "__.", "....", "..", ".___", "_._", "._..", "__", "_.", "___", ".__.", "__._", "._.", "...", "_", ".._", "..._", ".__", "_.._", "_.__", "__..", ".____", "..___", "...__", "...._", ".....", "_....", "__...", "___..", "____.", "_____", " ", "" ];
 
   //declaring our variables
   var plain_text = document.getElementById("input_area").value.toLowerCase(); //input string lowercased immediately
@@ -68,11 +68,22 @@ function encodemorse(b)
   //if statement to check if we decode or encode
   if (!b)
   {
+    for (var i = 0; i < plain_text.length; i++) {   // for loop and if statement responsible for breaking when non letters are asked to be encoded
+
+      if (!plain_text[i].match(/[a-z]/i)) {
+
+        cypher_text = "Incorrect Input";
+        document.getElementById("output").innerHTML = cypher_text;
+        return;
+
+      }
+    }
   var words = plain_text.split(" "); //splitting input into words
 
   for (var j=0; j < words.length; j ++)
   {
     var word = words[j]; //selecting one word from the words
+
 
     for (var i = 0; i < word.length; i ++) {
 
@@ -85,6 +96,17 @@ function encodemorse(b)
   }
   else
   {
+    for (var i = 0; i < plain_text.length; i++) {   // for loop and if statement responsible for breaking when non morse is asked to be decoded
+
+      if (plain_text[i].match(/[a-z]/i)) {
+
+        cypher_text = "Incorrect Input";
+        document.getElementById("output").innerHTML = cypher_text;
+        return;
+
+      }
+    }
+
     var words = plain_text.split("/"); //splitting input into words
 
     for (var j=0; j < words.length; j++)
@@ -92,6 +114,7 @@ function encodemorse(b)
       var word = words[j]; //selecting one word from the word
 
       var letters = word.split(" "); //splitting again into letters of morsecode
+
 
       for (var i = 0; i < letters.length-1; i++) {
 
@@ -115,7 +138,7 @@ function encodepig(b) {
   var cypher_text = '';
   var vowels = /[aeiou]/gi;
 
-  if (!b) {
+if (!b) {
 
     var words = plain_text.split(" ");
 
@@ -130,16 +153,34 @@ function encodepig(b) {
         else {
           var firstvowel = word.indexOf(word.match(vowels)[0]);
 
-          cypher_text += word.substr(firstvowel) + word.substr(0, firstvowel) + 'ay '; //otherwise we take all constanants before the first vowel, add them to the end of our word followed by "ay"
+          cypher_text += word.substr(firstvowel) + "-" + word.substr(0, firstvowel) + 'ay '; //otherwise we take all constanants before the first vowel, add them to the end of our word followed by "ay"
         }
     }
+  }
+  else {
+    var words = plain_text.split(" ");
 
-}
-else {
-  cypher_text = 'WIP';
+    /*
+    for (var i = 0; i < words.length; i++) {
+
+        var word = words[i];
+
+        var word1 = words[1].subtr("-ay");
+        if (word1!=null){ //if word starts with a vowel we just add way
+
+          cypher_text += ;
+        }
+        else {
+          var firstvowel = word.indexOf(word.match(vowels)[0]);
+
+          cypher_text += word.substr(firstvowel) + "-" + word.substr(0, firstvowel) + 'ay '; //otherwise we take all constanants before the first vowel, add them to the end of our word followed by "ay"
+        }
+    }
+    */
+  }
 
 
-}
+
   document.getElementById("output").innerHTML = cypher_text; //outputing to html element
 }
 
