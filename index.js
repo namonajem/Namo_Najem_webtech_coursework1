@@ -5,9 +5,9 @@ function encoderot13()
   var cypher_text = []; //output string
   var alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ']
 
-var words = plain_text.split(' ');
+var words = plain_text.split(' '); //splitting words by spaces
 
-for (var i = 0; i < words.length; i++) {
+for (var i = 0; i < words.length; i++) { //itterating over each word
 
   var word = words[i];
 
@@ -39,24 +39,24 @@ function encodecaesar(b)
   var cypher_text = '';
 
 
-	if (b)
-		length = (-length) + 26;
+	if (b) //flag to decode
+		length = (-length) + 26; //decoding by adding 26 to negative length of input
 
 	for (var i = 0; i < plain_text.length; i ++) {
 
 		var l = plain_text[i];
 
-		if (l.match(/[a-z]/i)) {
+		if (l.match(/[a-z]/i)) { //checking if letters match that of the alphabet
 
 			var value = plain_text.charCodeAt(i);
 
-			if ((value >= 65) && (value <= 90))
+			if ((value >= 65) && (value <= 90)) //encoding for uppercase
 				l = plain_texting.fromCharCode(((value - 65 + length) % 26) + 65);
 
-			else if ((value >= 97) && (value <= 122))
+			else if ((value >= 97) && (value <= 122)) //encoding for lowercase
 				l = String.fromCharCode(((value - 97 + length) % 26) + 97);
 		}
-		cypher_text += l;
+		cypher_text += l; //adding letter to output string
 	}
   document.getElementById("output").innerHTML = cypher_text; //outputing to html element
 
@@ -75,7 +75,7 @@ function encodemorse(b)
   //if statement to check if we decode or encode
   if (!b)
   {
-    for (var i = 0; i < plain_text.length; i++) {   // for loop and if statement responsible for breaking when non letters are asked to be encoded
+    for (var i = 0; i < plain_text.length; i++) {   // for loop and if statement responsible for returning when non letters are asked to be encoded
 
       if (!plain_text[i].match(/[a-z]/i)) {
 
@@ -147,7 +147,7 @@ function encodepig(b) {
 
 if (!b) {
 
-    var words = plain_text.split(" ");
+    var words = plain_text.split(" "); //splitting into words
 
     for (var i = 0; i < words.length; i++) {
 
@@ -164,16 +164,16 @@ if (!b) {
         }
     }
   }
-  else {
-    var words = plain_text.split(" ");
+  else { //decoding
 
+    var words = plain_text.split(" "); //splitting by spaces
 
     for (var i = 0; i < words.length-1; i++) {
 
         var word = words[i];
         word = word.trim();
 
-        if (!word.endsWith('ay')) {
+        if (!word.endsWith('ay')) { //flag if isnt pig latin
 
           cypher_text = "Incorrect Input";
           document.getElementById("output").innerHTML = cypher_text;
@@ -181,12 +181,12 @@ if (!b) {
 
         }
 
-        if (word.endsWith('way')){
+        if (word.endsWith('way')){ //decoding if word started with a vowel
 
           cypher_text += word.substr(0,word.length-3) + ' ';
 
         }
-        else {
+        else { //decoding if word started with constanannt(s)
               var word1 = word.substr(0, word.length-2);
 
               cypher_text += word1.substr(word.lastIndexOf('-') +1, word.length) + word1.substr(0, word.lastIndexOf('-')) + ' ' ;
@@ -201,9 +201,11 @@ if (!b) {
 
 function copy() {
 
-  document.getElementById("input_area").value = document.getElementById("output").innerHTML;
+  document.getElementById("input_area").value = document.getElementById("output").innerHTML; //JS for button to copy output to input element
 }
 
+
+//JS to open and close side Navigation
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
