@@ -45,6 +45,7 @@ a[type=Homerot]:hover {
     background-image: url("rot.PNG");
     background-size: cover;
     text-shadow: 1px 1px 0px  #003E47, -1px -1px 0px  #003E47, 1px -1px 0px  #003E47, -1px 1px 0px  #003E47;
+    text-outline:
 
 }
 

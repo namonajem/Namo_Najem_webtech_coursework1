@@ -5,14 +5,18 @@ function encoderot13()
   var cypher_text = []; //output string
   var alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ']
 
+var words = plain_text.split(' ');
 
-  //for loop that replaces each letter with one 13 letters after it
-  for(var idx=0; idx<plain_text.length; idx++)
+for (var i = 0; i < words.length; i++) {
+
+  var word = words[i];
+
+  for(var idx=0; idx<word.length; idx++)
   {
-    input = alphabet.indexOf(plain_text[idx]);
+    input = alphabet.indexOf(word[idx]);
     if(input == -1)
     {
-      cypher_text.push(plain_text[idx]);
+      cypher_text.push(word[idx]+' ');
     }
     else
     {
@@ -21,6 +25,9 @@ function encoderot13()
       cypher_text.push(letter); //pushing the substitute to the output string
     }
   }
+}
+  //for loop that replaces each letter with one 13 letters after it
+
   document.getElementById("output").innerHTML = cypher_text.join(""); //outputing to html element
 }
 
