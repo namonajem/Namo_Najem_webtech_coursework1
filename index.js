@@ -160,32 +160,42 @@ if (!b) {
   else {
     var words = plain_text.split(" ");
 
-    /*
-    for (var i = 0; i < words.length; i++) {
+
+    for (var i = 0; i < words.length-1; i++) {
 
         var word = words[i];
+        word = word.trim();
 
-        var word1 = words[1].subtr("-ay");
-        if (word1!=null){ //if word starts with a vowel we just add way
+        if (!word.endsWith('ay')) {
 
-          cypher_text += ;
+          cypher_text = "Incorrect Input";
+          document.getElementById("output").innerHTML = cypher_text;
+          return;
+
+        }
+
+        if (word.endsWith('way')){
+
+          cypher_text += word.substr(0,word.length-3) + ' ';
+
         }
         else {
-          var firstvowel = word.indexOf(word.match(vowels)[0]);
+              var word1 = word.substr(0, word.length-2);
 
-          cypher_text += word.substr(firstvowel) + "-" + word.substr(0, firstvowel) + 'ay '; //otherwise we take all constanants before the first vowel, add them to the end of our word followed by "ay"
+              cypher_text += word1.substr(word.lastIndexOf('-') +1, word.length) + word1.substr(0, word.lastIndexOf('-')) + ' ' ;
         }
     }
-    */
+
   }
-
-
 
   document.getElementById("output").innerHTML = cypher_text; //outputing to html element
 }
 
 
+function copy() {
 
+  document.getElementById("input_area").value = document.getElementById("output").innerHTML;
+}
 
 
 function openNav() {

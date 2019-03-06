@@ -14,63 +14,20 @@ a:hover {
   color:  #003E47;
 }
 
-
-.HomeButton {
-
-  font-family: 'Crete Round';
-  border-radius: 25px;
-  border: 6px solid #003E47;
-  color: White;
-  background-color: #003E47;
-  padding: 5px;
-  outline: none;
-  margin: auto;
-  font-size: 25px;
-  color: white;
-  font-family: 'Crete Round';
-  outline: none;
-  text-align: center;
-  margin: auto;
-  width: 50%;
-  height: 70%;
+button[type=button]:hover {
+  text-decoration:underline;
+  background-color:#003566;
+  background-image: url("Rain.gif");
 
 }
 
+button[type=CopyButton]:hover {
+  text-decoration:underline;
 
-.sidenav {
-  height: 250%;
-  width:0;
-  font-family: 'Crete Round';
-  position: sticky;
-  border-radius: 25px;
-  z-index: 1;
-  top:0;
-  left:0;
-  background-color: white;
-  overflow-x: hidden;
-  overflow-y:auto;
-  transition: 0.5s;
-  padding-top: 50px;
-}
-.sidenav a {
-  padding: 2px 2px 2px 2px;
-  text-decoration: none;
-  font-size: 25px;
-  color: Gray;
-  display: block;
-  transition: 0.3s;
 }
 
 .sidenav a:hover {
   color: #003E47;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 5px;
 }
 
 @media screen and (max-height: 450px) {
@@ -78,37 +35,6 @@ a:hover {
   .sidenav a {font-size: 18px;}
 }
 
-.openNav {
-
-  border: 0px;
-  background-color: white;
-  padding-left:35px;
-  font-family: 'Crete Round';
-  color: gray;
-  font-size: 25px;
-  outline: none;
-}
-
-
-.button {
-
-  font-family: 'Crete Round';
-  border-radius: 25px;
-  color: White;
-  background-color: #003E47;
-  padding: 5px;
-  outline: none;
-}
-
-
-
-
-button[type=button]:hover {
-  text-decoration:underline;
-  background-color:#003566;
-  background-image: url("Rain.gif");
-
-}
 
 a[type=Homerot]:hover {
 
@@ -161,6 +87,86 @@ a[type=Homemorse]:hover {
 
 }
 
+
+.HomeButton {
+
+  font-family: 'Crete Round';
+  border-radius: 25px;
+  border: 6px solid #003E47;
+  color: White;
+  background-color: #003E47;
+  padding: 5px;
+  outline: none;
+  margin: auto;
+  font-size: 25px;
+  color: white;
+  font-family: 'Crete Round';
+  outline: none;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  height: 70%;
+
+}
+
+
+.sidenav {
+  height: 250%;
+  width:0;
+  font-family: 'Crete Round';
+  position: sticky;
+  border-radius: 25px;
+  z-index: 1;
+  top:0;
+  left:0;
+  background-color: white;
+  overflow-x: hidden;
+  overflow-y:auto;
+  transition: 0.5s;
+  padding-top: 50px;
+}
+.sidenav a {
+  padding: 2px 2px 2px 2px;
+  text-decoration: none;
+  font-size: 25px;
+  color: Gray;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 5px;
+}
+
+
+.openNav {
+
+  border: 0px;
+  background-color: white;
+  padding-left:35px;
+  font-family: 'Crete Round';
+  color: gray;
+  font-size: 25px;
+  outline: none;
+}
+
+
+.button {
+
+  font-family: 'Crete Round';
+  border-radius: 25px;
+  color: White;
+  background-color: #003E47;
+  padding: 5px;
+  outline: none;
+}
+
+
 .image {
 
     max-width:180px;
@@ -190,7 +196,6 @@ a[type=Homemorse]:hover {
   margin-left: 100px;
   margin-right: 100px;
 
-
 }
 
 .content {
@@ -201,6 +206,16 @@ a[type=Homemorse]:hover {
     display: grid;
     grid-template-columns: repeat(1, 3fr);
     grid-auto-rows: 100px;
+
+}
+
+.main {
+  display:grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-auto-rows: 80px;
+  grid-column-gap: 10px;
+  grid-row-gap: 100px;
+
 
 }
 
@@ -216,17 +231,6 @@ a[type=Homemorse]:hover {
 
 }
 
-
-
-.main {
-  display:grid;
-  grid-template-columns: repeat(2, 2fr);
-  grid-auto-rows: 100px;
-  grid-column-gap: 20px;
-  grid-row-gap: 100px;
-
-
-}
 
 
 
@@ -287,6 +291,25 @@ a[type=Homemorse]:hover {
   text-align: center;
   width: 30%;
   height: 70%;
+}
+
+.copyButton {
+
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 25px;
+  border: 6px solid #003E47;
+  font-size: 25px;
+  color: white;
+  background-color: #003E47;
+  font-family: 'Crete Round';
+  outline: none;
+  text-align: center;
+  width: 20%;
+  height: 30%;
+  font-size: 15px;
+
+
 }
 
 #footer{

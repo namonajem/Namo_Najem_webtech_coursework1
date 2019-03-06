@@ -21,7 +21,6 @@
 			<a href="caesar.html">Caesar Cypher</a>
 			<a href="caesar.html">Morse Code</a>
 			<a href="caesar.html">Pig latin</a>
-			<a href="About.html">About</a>
 		</div>
 
 		<label id="label">Type your message here</label>
@@ -29,14 +28,18 @@
 
 
 			<button class="button" type="button" onclick="encodepig(0)" id="encode_button">Encode Message</button>
+						<button class="button" type="button" onclick="encodepig(1)" id="decode_button">Decode Message</button>
 
 
 			      <div id="output_area">
 			        <p>This is your encoded message:<br />
 								 <div id="output"></div>
-			          </p>
-							</div>
-				</div>
+							 </p>
+
+							 <button class="copyButton" type="CopyButton" onclick="copy()" id="copy_button">Copy to Clipboard/Back into Inputbox</button>
+
+						 </div>
+					 </div>
 				<div id="footer">
 					Copyright &copy; 2019 Namo Najem
 				</div>
