@@ -34,7 +34,7 @@ for (var i = 0; i < words.length; i++) { //itterating over each word
 function encodecaesar(b)
 {
   //declaring our variables
-  var plain_text = document.getElementById("input_area").value; //input string
+  var plain_text = document.getElementById("input_area").value.toLowerCase(); //input string
   var length = plain_text.length;
   var cypher_text = '';
 

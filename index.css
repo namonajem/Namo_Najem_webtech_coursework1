@@ -213,9 +213,28 @@ a[type=Homemorse]:hover {
 .main {
   display:grid;
   grid-template-columns: repeat(2, 2fr);
-  grid-auto-rows: 80px;
-  grid-column-gap: 10px;
+  grid-auto-rows: 100px;
+  grid-column-gap: 0px;
   grid-row-gap: 100px;
+
+
+}
+
+.copyButton {
+
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 25px;
+  border: 6px solid #003E47;
+  font-size: 25px;
+  color: white;
+  background-color: #003E47;
+  font-family: 'Crete Round';
+  outline: none;
+  text-align: center;
+  width: 20%;
+  height: 30%;
+  font-size: 15px;
 
 
 }
@@ -231,8 +250,6 @@ a[type=Homemorse]:hover {
   text-shadow: 4px 4px #000000;
 
 }
-
-
 
 
 #mySidenav {
@@ -294,24 +311,7 @@ a[type=Homemorse]:hover {
   height: 70%;
 }
 
-.copyButton {
 
-  margin: auto;
-  margin-top: 50px;
-  border-radius: 25px;
-  border: 6px solid #003E47;
-  font-size: 25px;
-  color: white;
-  background-color: #003E47;
-  font-family: 'Crete Round';
-  outline: none;
-  text-align: center;
-  width: 20%;
-  height: 30%;
-  font-size: 15px;
-
-
-}
 
 #footer{
   margin-top: 240px;
