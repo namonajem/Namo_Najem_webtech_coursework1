@@ -77,7 +77,7 @@ function encodemorse(b)
   {
     for (var i = 0; i < plain_text.length; i++) {   // for loop and if statement responsible for returning when non letters are asked to be encoded
 
-      if (!plain_text[i].match(/[a-z]/i)) {
+      if (!plain_text[i].match(/[a-z]/i) && !plain_text[i].match(" ")) {
 
         cypher_text = "Incorrect Input";
         document.getElementById("output").innerHTML = cypher_text;
